@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .TopSubMenu{
+            margin: 20px 0 30px 0;
+        }
+        .TopSubMenu a{
+            display: inline-block;
+            text-decoration: none;
+            margin-right: 50px;
+        }
+        .TopSubMenu div{
+            width: 250px;
+            height: 30px;
+            border: 1px solid #00529b;
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            line-height: 30px;
+        }
+        .TopSubMenu .Selected{
+            color: white;
+            background-color: #00529b;
+        }
+        
+        .submenu{
+            position: fixed;
+            width: 200px;
+        }
+        .submenu h2{
+            width: 180px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding: 0 0 10px 10px;
+            border-bottom: 2px solid #00529b;
+            font-size: 25px;
+            font-weight: bold;
+            color: #00529b;
+        }
+        .submenu a{
+            width: 150px;
+            text-decoration: none;
+        }
+        .submenu p{
+            margin: 10px 0 10px 0;
+            width: 150px;
+            border-bottom: 1px solid #ccc;
+        }
+        .submenu span{
+            padding-left: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #00529b;
+        }
+        
+        
+        .main-content{
+            margin-left: 200px;
+            margin-bottom: 50px;
+        }
+        .main-content h2{
+            margin-left: 25px;
+            margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #00529b;
+        }
+        .main-content h3{
+            font-size: 15px;
+            font-weight: bold;
+            color: #00529b;
+        }
+        .main-content hr{
+            border: 0;
+            height: 1px;
+            background: #00529b;
+        }
+        .main-content{
+            padding-left: 40px;
+            font-size: 10px;
+        }
+        
+                
+        #anchor3 table{
+            margin: 20px auto 20px;
+            text-align: center;
+        }
+        #anchor3 td{
+            width: 200px;
+            height: 40px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        .titleblock{
+            float: left;
+            width: 12.5px;
+            margin-left: 5px;
+            height: 30px;
+            background: #00529b;
+        }
+        
+        #qual
+        {
+            padding-left: 40px;
+            font-size: 10px;
+        }
+        
+        .clear
+        {
+            clear: both;
+        }
+        
+        .blueTitle{
+            margin-top: 10px;
+            margin-left: 20px;
+            background: #00529b;
+            width: 1500px;
+            height: 40px;
+            text-align: left;
+            line-height: 40px;
+            color: white;
+            padding-left: 10px;
+            font-size: 20px;
+            
+        }
+        
+        #score1{
+            padding-top: 10px;
+            float: left;
+            
+        }
+        
+        #score1 p{
+            color: #00529b;
+            font-size: 15px;
+        }
+        
+        #clsol-1{
+            margin-top: -20px;
+            margin-left: 30px;
+        }
+        
+        #clsol-2{
+            margin-left: 30px;
+        }
+        
+        #score2{
+            padding-top: 10px;
+            margin-left: 600px;
+            float: left;
+        }
+        
+        #score2 p{
+            color: #00529b;
+            font-size: 15px;
+        }
+        
+        #meet
+        {
+            color: #00529b;
+            font-size: 15px;
+            margin-left: 30px;
+           
+            
+        }
+        
+        .smlTitle
+        {
+            color: #00529b;
+            font-size: 15px;
+            margin-left: 30px;
+          
+        }
+        
+        #titleText
+        {
+              float: left;
+        }
+        
+        #line-1{
+            float: left;
+            width: 1250px;
+            background:#00529b;
+            height: 1px;
+            margin-top: 7.5px;
+        }
+        
+         #line-2{
+            float: left;
+            width: 1360px;
+            background:#00529b;
+            height: 1px;
+            margin-top: 7.5px;
+        }
+        
+        #hyper{
+            margin-left: 100px;
+        }
+        
+        #UUL li{
+            float: left;
+            margin-top: 10px;
+            margin-left: 120px;
+            margin-bottom: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+<!--
+  <div class="submenu" style="position: fixed; width: 200px;">
+        <h2 style="width: 180px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding: 0 0 10px 10px;
+            border-bottom: 2px solid #00529b;
+            font-size: 25px;
+            font-weight: bold;
+            color: #00529b;">熱流能源與綠色科技</h2>
+        <a href="#anchor1" style="width: 150px; text-decoration: none;"><span style="padding-left: 10px; font-size: 15px; font-weight: bold; color: #00529b;">綠色科技與燃料電池</span></a>
+        <p style="margin: 10px 0 10px 0; width: 150px; border-bottom: 1px solid #ccc;"></p>
+        <a href="#anchor2" style="width: 150px; text-decoration: none;"><span style="padding-left: 10px; font-size: 15px; font-weight: bold; color: #00529b;">計算流體力學</span></a>
+        <p style="margin: 10px 0 10px 0; width: 150px border-bottom: 1px solid #ccc;"></p>
+        <a href="#anchor3" style="width: 150px; text-decoration: none;"><span style="padding-left: 10px; font-size: 15px; font-weight: bold; color: #00529b;">奈米複合材料</span></a>
+        <p style="margin: 10px 0 10px 0; width: 150px; border-bottom: 1px solid #ccc;"></p>
+        
+    </div>
+-->
+  
+    <div class="TopSubMenu">
+        <a href="#"><div>大學部</div></a>
+        <a href="#"><div class="Selected">研究所</div></a>
+        <a href="#"><div>陸生、僑生、外籍生</div></a>
+    </div>
+   
+    <div class="submenu">
+        <h2>研究所</h2>
+        <a href="#anchor1"><span>碩士班</span></a>
+        <p></p>
+        <a href="#anchor2"><span>博士班</span></a>
+        <p></p>
+        
+    </div>
+   
+    <div class="main-content">
+    
+        <div id="anchor1">
+            
+            <div class="titleblock"></div>
+            <h2>碩士班</h2>
+            <div class="clear"></div>
+            <hr>
+            <div class="blueTitle">報考資格</div>
+            <div id="qual">
+            <p>報考資格：具有下列資格之一者得報考之</p>
+            <p>&emsp;一、國內學士學位畢業者（含應屆畢業生）</p>
+            <p>&emsp;二、境外學士學位者（含應屆畢業生）</p>
+            <p>&emsp;三、具有同等學力規定之資格</p>
+            </div>
+            <div class="blueTitle">碩士班甄試入學</div>
+            
+            <div id="score1">
+                <p style="margin-left: 30px;">資料審查30%</p><br/>
+            <ol id="clsol-1">
+                <li>機械工程學系碩士班考生學經歷彙整表</li>
+                <li>大學成績單正本</li>
+                <li>讀書計畫</li>
+                <li>個人簡歷</li>
+                <li>其他有助於審查之資料</li>
+            </ol>
+            </div>
+            
+            <div id="score2">
+                <p>錄取同分參酌順序</p><br/>
+            <ol id="clsol-1">
+                <li>面試</li>
+                <li>口試</li>
+            </ol>
+            </div>
+            <div class="clear"></div>
+            
+            <p id="meet">口試70%</p>
+            
+            
+            <div class="smlTitle">
+            <div id="titleText">歷年碩士班甄試入學簡章</div>
+            <div id="line-1"></div>
+            <div class="clear"></div>
+            </div>
+              
+              <div id="hyper">
+               
+            <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-bottom: 25px;margin-top: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>
+            
+             <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-top: 25px;margin-bottom: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>
+            
+            <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-top: 25px;margin-bottom: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>
+            
+            <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-top: 25px;margin-bottom: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>         
+            </div>
+            
+            <div class="blueTitle">碩士班考試入學</div>
+            <p id="meet">碩班考試100%（七科任選一科）</p>
+            <ol id="UUL">
+                <li>工程數學</li>
+                <li>熱力學</li>
+                <li>流體力學</li>
+                <li>應用力學</li>
+                <li>材料力學</li>
+                <li>自動控制</li>
+                <li>產品設計</li>
+            </ol>
+            <div class="clear"></div>
+            
+            <div class="smlTitle">
+            <div id="titleText">歷年碩士班考試入學簡章</div>
+            <div id="line-1"></div>
+            <div class="clear"></div>
+            </div>
+            
+             <div id="hyper">
+               
+            <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-bottom: 25px;margin-top: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>
+            
+             <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-top: 25px;margin-bottom: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>
+            
+            <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-top: 25px;margin-bottom: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>
+            
+            <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-top: 25px;margin-bottom: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>         
+            </div>
+            
+            <div class="smlTitle">
+            <div id="titleText">歷年考題</div>
+            <div id="line-2"></div>
+            <div class="clear"></div>
+            </div>
+            <div id="hyper">
+               
+            <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-bottom: 25px;margin-top: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>
+            
+             <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-top: 25px;margin-bottom: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>
+            
+            <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-top: 25px;margin-bottom: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>
+            
+            <a href="#" style="display: inline-block; margin-right: 30px; text-decoration: none;margin-top: 25px;margin-bottom: 25px;">
+                <div class="content" style="width: 150px; height: 60px; border: 1px solid #ccc; text-align: center; line-height: 40px; box-shadow: 1.5px 1.5px 3px #888888;">
+                    <p style="font-size: 10px; color: black;">元智大學選課系統</p>
+                </div>
+            </a>         
+            </div>
+            
+            <div class="blueTitle">獎學金</div>
+
+        </div>
+        <div id="anchor2">
+           
+            <div class="titleblock"></div>
+            <h2>博士班</h2>
+            <div class="clear"></div>
+            <hr>
+            <div id="qual">
+            <p>報考資格：具有下列資格之一者得報考之</p>
+            <p>&emsp;一、國內碩士學位畢業者（含應屆畢業生）</p>
+            <p>&emsp;二、境外碩士學位者（含應屆畢業生）</p>
+            <p>&emsp;三、具有同等學力規定之資格</p>
+            </div>
+            <p id="meet">繳交資料</p>
+            <ol id="clsol-2">
+                <li>機械工程學系碩士班考生學經歷彙整表</li>
+                <li>大學成績單正本</li>
+                <li>讀書計畫</li>
+                <li>個人簡歷</li>
+                <li>其他有助於審查之資料</li>
+            </ol>
+            
+            
+        </div>
+    
+    
+    </div>
+</body>
+</html>
